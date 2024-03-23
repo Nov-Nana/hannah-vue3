@@ -1,0 +1,61 @@
+@import './config.scss';
+@import './function.scss';
+@import '../theme.scss';
+
+@mixin go($block) {
+    $B: $namespace + '-' + $block;
+
+    .#{$B} {
+        @content;
+    }
+}
+
+@mixin goId($block) {
+    $B: $namespace + '-' + $block;
+
+    ##{$B} {
+        @content;
+    }
+}
+
+
+// 获取背景颜色
+@mixin fetch-bg-color($target) {
+    @include themeify {
+        background-color: themed($target);
+    }
+}
+
+// 处理样式，遍历主题map 
+@mixin themeify {
+    @each $theme-name, $theme-map in $themes {
+        //!global 把局部变量提升为全局变量 
+        $theme-map: $theme-map !global;
+
+        //判断html的data-theme的属性值#{}是sass的插值表达式 //& sass嵌套里的父容器标识   @content是混合器插槽，像vue的slot 
+        [data-theme='#{$theme-name}'] & {
+            @content;
+        }
+    }
+}
+
+// hover边框颜色
+@mixin hover-border-color($target) {
+    @include themeify {
+        border: 1px solid themed($target);
+    }
+}
+
+//获取背景渐变颜色
+@mixin background-image($target) {
+    @include themeify {
+        background-image: themed($target);
+    }
+}
+
+// 获取文字颜色
+@mixin fetch-text-color($target) {
+    @include themeify {
+        color: themed($target);
+    }
+}

@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper-c27b6911.js";import{c as s,v as t,m as o,o as c}from"./index-b4acd0e1.js";const r="/assets/500-0e2ea61d.svg",a={},n=o("img",{src:r,alt:""},null,-1);function _(l,m){return c(),s("div",null,[n,t(" 抱歉，服务器出错了 ")])}const f=e(a,[["render",_]]);export{f as default};

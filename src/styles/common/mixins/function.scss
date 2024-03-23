@@ -1,0 +1,4 @@
+//声明一个根据Key获取颜色的function 
+@function themed($key){
+    @return map-get($theme-map, $key)
+}

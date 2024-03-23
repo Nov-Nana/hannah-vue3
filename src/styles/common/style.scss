@@ -1,0 +1,37 @@
+@import './var.scss';
+@import './mixins/mixins.scss';
+@import './formate.scss';
+@import './animation.scss';
+@import './font.scss';
+
+
+
+// cursor 小手
+.go-cursor-pointer {
+    cursor: pointer;
+}
+
+// IE盒模型
+.go-boderbox {
+    box-sizing: border-box;
+}
+
+// 毛玻璃
+.go-background-filter {
+    backdrop-filter: $--filter-blur-base;
+    @include fetch-bg-color("filter-color");
+    box-shadow: $--border-shadow;
+}
+
+// 毛玻璃
+.go-background-filter-shallow {
+    backdrop-filter: $--filter-blur-base;
+    @include fetch-bg-color("filter-color-shallow");
+    box-shadow: $--border-shadow;
+}
+
+// 边框圆角
+.go-border-radius {
+    border-radius: $--border-radius-base;
+    overflow: hidden;
+}

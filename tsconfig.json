@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    // "useDefineForClassFields": true,
+    "lib": ["ES6","ESNext", "DOM"],
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      // "@/*": ["src/*"],
+      "/#/*": ["types/*"]
+    },
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    // "moduleResolution": "Node",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false, //不允许使用any
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/views/admin/excel/MergeHeadervue"],
+  "exclude": ["node_modules", "dist", "**/*.js"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

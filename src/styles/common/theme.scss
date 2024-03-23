@@ -1,0 +1,8 @@
+@import './mixins/config.scss';
+@import './_dark';
+@import './_light';
+
+$themes: (
+    #{$theme-light}: $light,
+    #{$theme-dark}: $dark
+)

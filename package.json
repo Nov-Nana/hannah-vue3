@@ -1,0 +1,49 @@
+{
+  "name": "go-view-vue3ts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@kangc/v-md-editor": "^2.3.18",
+    "@tinymce/tinymce-vue": "^5",
+    "@vicons/antd": "^0.12.0",
+    "@vicons/carbon": "^0.12.0",
+    "@vicons/ionicons5": "^0.12.0",
+    "animate.css": "^4.1.1",
+    "axios": "^1.6.0",
+    "color": "^4.2.3",
+    "crypto-js": "^4.2.0",
+    "echarts": "^5.4.3",
+    "file-saver": "^2.0.5",
+    "highlight.js": "^11.9.0",
+    "lodash": "^4.17.21",
+    "naive-ui": "^2.35.0",
+    "pinia": "^2.1.7",
+    "resize-observer-polyfill": "^1.5.1",
+    "sortablejs": "^1.15.2",
+    "vue": "^3.3.4",
+    "vue-i18n": "^9.6.5",
+    "vue-router": "^4.2.5",
+    "vue3-count-to": "^1.1.2",
+    "vue3-lazyload": "^0.3.8",
+    "xlsx": "0.14.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vueuse/core": "^10.5.0",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "script-loader": "^0.7.2",
+    "typescript": "^5.0.2",
+    "unplugin-auto-import": "^0.17.5",
+    "vite": "^4.4.5",
+    "vite-plugin-compression": "^0.5.1",
+    "vue-tsc": "^1.8.5"
+  }
+}
