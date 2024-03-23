@@ -6,9 +6,9 @@ export function createRouterGuard(router: Router) {
     // 前置
     router.beforeEach(async (to, _from, next) => {
         // @ts-ignore
-        if (!window.route) window.route = { params: {} }
+        // if (!window.route) window.route = { params: {} }
         // @ts-ignore
-        Object.assign(window.route.params, to.query)
+        // Object.assign(window.route.params, to.query)
 
         const Loading = window['$loading']
         Loading && Loading.start()
@@ -16,14 +16,14 @@ export function createRouterGuard(router: Router) {
         const isErrorPage = router.getRoutes().findIndex((item) => item.name === to.name)
         // 前往页面不在路由列表里
         if (isErrorPage === -1) {
-            next({ name: PageEnum.ERROR_PAGE_NAME_404 })
+            return next({ name: PageEnum.ERROR_PAGE_NAME_404 })
         }
         // 没登录
         if (!loginCheck()) {
             if (to.name === PageEnum.BASE_LOGIN_NAME) {
-                next()
+                return next()
             }
-            next({ name: PageEnum.BASE_LOGIN_NAME })
+            return next({ name: PageEnum.BASE_LOGIN_NAME })
         }
         next()
     })
@@ -36,7 +36,7 @@ export function createRouterGuard(router: Router) {
     })
 
     // 错误
-    router.onError(err =>{
+    router.onError(err => {
         console.log(err, '路由错误')
     })
 }

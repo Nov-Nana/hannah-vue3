@@ -1,11 +1,12 @@
 <template>
     <!-- 登录 -->
     <div class="go-login-box">
+        <!-- 背景 -->
         <div class="go-login-box-bg">
             <aside class="bg-slot">
             </aside>
             <aside class="bg-img-box">
-                <transition-group name="list-complete">
+                <!-- <transition-group name="list-complete">
                     <template v-for="item in bgList" :key="item">
                         <div class="bg-img-box-li list-complete-item">
                             <n-collapse-transition :appear="true" :show="showBg">
@@ -13,9 +14,10 @@
                             </n-collapse-transition>
                         </div>
                     </template>
-                </transition-group>
+                </transition-group> -->
             </aside>
         </div>
+        <!-- 头部 -->
         <layout-header>
             <template #left></template>
             <template #right>
@@ -78,7 +80,7 @@
             </div>
         </div>
         <div class="go-login-box-footer">
-            <layout-footer></layout-footer>
+            <!-- <layout-footer></layout-footer> -->
         </div>
     </div>
 </template>
@@ -86,7 +88,7 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 import LayoutHeader from '../../layout/components/LayoutHeader/index.vue'
-import LayoutFooter from '../../layout/components/LayoutFooter/index.vue'
+// import LayoutFooter from '../../layout/components/LayoutFooter/index.vue'
 import { shuffle } from 'lodash';
 import { NCollapseTransition } from 'naive-ui';
 import { reactive } from 'vue';

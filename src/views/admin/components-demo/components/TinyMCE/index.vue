@@ -34,8 +34,8 @@ const props = defineProps({
 })
 const emits = defineEmits(['input'])
 let init = ref({
-    language:'zh-Hans',
-    plugins: ' preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media Template code codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount emoticons autosave autoresize',
+    // language:'zh-Hans',
+    plugins: ' preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media code codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount emoticons autosave autoresize',
     toolbar: 'code undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
     styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
     table image media charmap emoticons pagebreak insertdatetime  preview | fullscreen | bdmap lineheight',
