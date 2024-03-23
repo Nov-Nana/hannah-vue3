@@ -10,7 +10,7 @@ function pathResolve(dir: string) {
 }
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/hannah-vue3/',
+  base: '/hannah-vue3/dist',
   // 路径重定向
   resolve: {
     alias: [
